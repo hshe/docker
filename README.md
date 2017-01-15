@@ -39,4 +39,6 @@ usage:
 git config branch.master.remote origin
 git config branch.master.merge refs/heads/master
 
+url = https://github.com/hshe/docker.git
+url = https://hshe@github.com/hshe/docker.git
 ```
