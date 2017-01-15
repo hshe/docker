@@ -38,5 +38,12 @@ merge 冲突解决后，进行融合。
 usage:
 git config branch.master.remote origin
 git config branch.master.merge refs/heads/master
+(didn't work)
+
+guid:
+http://rogerdudler.github.io/git-guide/
+
+
+
 
 ```
