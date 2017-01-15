@@ -97,7 +97,36 @@ docker history [IMAGE ID]
 
 
 ```
+#others:
+```Ruby
+CMD(指定一个容器运行时要执行的命令)
+docker run -i -t crxy/cenos-tomcat /bin/bash
+等于在Dockerfile中添加 CMD ["/bin/ps"]
+注意：使用docker run 命令可以覆盖CMD指令。
+ENTRYPOINT(与CMD类似，但是ENTRYPOINT指定的命令不会被docker run指定的命令覆盖，它会把docker run命令行中指定的参数传递给ENTRYPOINT指令中指定的命令当作参数。)
+ENTRYPOINT ["/bin/ps"]
+docker run -t -i crxy/centos  -l
+ENTRYPOINT 还可以和CMD组合一块来用，可以实现，当用户不指定参数的时候使用默认的参数执行，如果用户指定的话就使用用户提供的参数
+ENTRYPOINT ["/bin/ps"]
+CMD ["-h"]
+注意：如果确实要覆盖默认的参数的话，可以在docker run中指定--entrypoint进行覆盖
+WORKDIR
+WORKDIR /etc
+RUN touch a.txt
+WORKDIR /usr/local
+RUN touch b.txt
+注意：可以在docker run命令中使用-w覆盖工作目录，但是不会影响之前在工作目录中执行的命令
+ADD	含解压
+COPY 直接复制到docker
 
+
+删除镜像
+docker rmi 用户ID/镜像名
+或者docker rmi `docker images -a -q`
+删除所有未打标签的镜像
+ docker rmi -f $(docker images --filter 'dangling=true')
+
+```
 
 
 
