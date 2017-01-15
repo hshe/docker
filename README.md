@@ -31,3 +31,12 @@ git push -force
 
 end
 ```
+## something about merge/fetch
+```Ruby
+fetch --> update(svn)
+merge 冲突解决后，进行融合。
+usage:
+git config branch.master.remote origin
+git config branch.master.merge refs/heads/master
+
+```
