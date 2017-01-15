@@ -126,6 +126,10 @@ docker rmi 用户ID/镜像名
 删除所有未打标签的镜像
  docker rmi -f $(docker images --filter 'dangling=true')
 
+
+```
+```Ruby
+do something...
 ```
 
 

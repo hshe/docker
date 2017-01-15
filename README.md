@@ -46,4 +46,6 @@ http://rogerdudler.github.io/git-guide/
 
 
 
+url = https://github.com/hshe/docker.git
+url = https://hshe@github.com/hshe/docker.git
 ```
