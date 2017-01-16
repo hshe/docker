@@ -23,3 +23,5 @@ then
 yum install docker-engine 
 ```
 
+$centos6安装12版本，要升级的依赖太多。没有办法啦。
+
